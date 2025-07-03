@@ -2,7 +2,15 @@
 """
 create_html_scripts.py
 
-Gerador de scripts Python para converter arquivos MD específicos em HTML com SEO.
+Gerador de scripts    # Configurações específicas para este artigo
+    config = {
+        'md_file': 'articles_md/{md_file.name}',
+        'html_file': 'output/{md_file.stem}.html',
+        'author': '{config['author']}',
+        'url': '{config['url']}',
+        'keywords': '{config['keywords']}',
+        'description': '{config['description']}'
+    }ara converter arquivos MD específicos em HTML com SEO.
 Cria um script Python para cada arquivo Markdown encontrado no diretório.
 """
 
@@ -11,8 +19,11 @@ from pathlib import Path
 from typing import List, Dict
 
 def get_md_files() -> List[Path]:
-    """Retorna lista de arquivos Markdown no diretório atual."""
-    return [f for f in Path('.').glob('*.md') if f.name != 'README.md']
+    """Retorna lista de arquivos Markdown na pasta articles_md/."""
+    articles_dir = Path('articles_md')
+    if not articles_dir.exists():
+        return []
+    return [f for f in articles_dir.glob('*.md') if f.name != 'README.md']
 
 def generate_script_content(md_file: Path) -> str:
     """Gera o conteúdo do script Python para um arquivo MD específico."""
@@ -70,8 +81,8 @@ def main():
     
     # Configurações específicas para este artigo
     config = {{
-        'md_file': '{md_file.name}',
-        'html_file': '{md_file.stem}.html',
+        'md_file': 'articles_md/{md_file.name}',
+        'html_file': 'output/{md_file.stem}.html',
         'author': '{config['author']}',
         'url': '{config['url']}',
         'keywords': '{config['keywords']}',
@@ -86,7 +97,7 @@ def main():
         
         # Executa o script format-html-seo.py
         cmd = [
-            sys.executable, 'format-html-seo.py',
+            sys.executable, 'scripts/format-html-seo.py',
             config['md_file'], config['html_file'],
             '--author', config['author'],
             '--url', config['url']
@@ -142,8 +153,11 @@ def create_scripts():
         print(f"  • {md_file.name}")
         
         # Gera o script Python
-        script_name = f"{md_file.stem}.py"
+        script_name = f"scripts/conversion/{md_file.stem}.py"
         script_content = generate_script_content(md_file)
+        
+        # Cria o diretório se não existir
+        Path("scripts/conversion").mkdir(parents=True, exist_ok=True)
         
         # Salva o script
         with open(script_name, 'w', encoding='utf-8') as f:

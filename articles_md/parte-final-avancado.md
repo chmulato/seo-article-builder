@@ -1,6 +1,6 @@
 # Parte Final: Kafka Avançado e Produção
 
-![Apache Kafka com Java – Parte Final](/assets/images/kafka-java-parte-final.png)
+![Apache Kafka com Java – Parte Final](images/kafka-java-parte-final.png)
 
 ## Visão Geral
 

@@ -12,14 +12,15 @@ from pathlib import Path
 import time
 
 def get_conversion_scripts():
-    """Retorna lista de scripts de conversão no diretório atual."""
-    # Busca por scripts Python que correspondem a arquivos MD
+    """Retorna lista de scripts de conversão na pasta scripts/conversion/."""
+    # Busca por scripts Python na pasta scripts/conversion/
+    scripts_dir = Path('scripts/conversion')
+    if not scripts_dir.exists():
+        return []
+    
     scripts = []
-    for md_file in Path('.').glob('*.md'):
-        if md_file.name != 'README.md':
-            script_file = Path(f"{md_file.stem}.py")
-            if script_file.exists():
-                scripts.append(script_file)
+    for script_file in scripts_dir.glob('*.py'):
+        scripts.append(script_file)
     return scripts
 
 def run_script(script_path):

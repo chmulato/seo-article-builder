@@ -2,7 +2,7 @@
 
 - **Por Christian V. Mulato – Desenvolvedor Java Sênior à procura de novas oportunidades**
 
-![Desenvolvimento de Software](/assets/images/software.png)
+![Desenvolvimento de Software](images/software.png)
 
 ---
 

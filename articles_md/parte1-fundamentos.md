@@ -1,6 +1,6 @@
 # Parte I: Fundamentos do Apache Kafka
 
-![Apache Kafka com Java – Parte I](/assets/images/kafka-java-parte1.png)
+![Apache Kafka com Java – Parte I](images/kafka-java-parte1.png)
 
 ## Introdução
 

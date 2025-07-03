@@ -68,6 +68,9 @@ zookeeper-logs/
 *.swp
 *~
 
+# Arquivo de LOG
+log/
+
 # Arquivos de configuração sensíveis
 *.env
 
