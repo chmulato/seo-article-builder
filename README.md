@@ -56,22 +56,23 @@ seo-article-builder/
 │   └── images/                   # Imagens copiadas
 │
 ├── logs/                         # Logs detalhados
-│   └── YYYY_MM_DD_HH_MM_SS_seo_conversion.log
+|   |
+│   └── YYYY_MM_DD_HH_MM_SS_seo_conversion.log  # Log de cada execução
 │
 ├── scripts/                      # Scripts organizados
-│   ├── format-html-seo.py       # Módulo principal de conversão
-│   ├── html_config.py           # Configurações centralizadas
-│   ├── demo.py                  # Demonstração
-│   ├── run_conversion.py        # Conversão individual
-│   ├── build_all.py             # Build completo
-│   ├── build_single.py          # Build individual
-│   ├── clean_output.py          # Limpeza
-│   ├── conversion/              # Scripts de conversão específicos
-│   ├── automation/              # Scripts de automação
-│   └── demo/                    # Demonstrações
+│   ├── format-html-seo.py        # Módulo principal de conversão
+│   ├── html_config.py            # Configurações centralizadas
+│   ├── demo.py                   # Demonstração
+│   ├── run_conversion.py         # Conversão individual
+│   ├── build_all.py              # Build completo
+│   ├── build_single.py           # Build individual
+│   ├── clean_output.py           # Limpeza
+│   ├── conversion/               # Scripts de conversão específicos
+│   ├── automation/               # Scripts de automação
+│   └── demo/                     # Demonstrações
 │
 ├── config/                       # Configurações
-│   └── seo_config.py            # Configurações SEO
+│   └── seo_config.py             # Configurações SEO
 │
 ├── java_code/                    # Código Java dos exemplos
 └── backup_removed_files/         # Backup automático
