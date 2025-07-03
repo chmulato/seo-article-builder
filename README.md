@@ -11,7 +11,7 @@
 
 Aplicação Python profissional para converter artigos em formato Markdown para HTML responsivo com SEO otimizado
 
-### 🚀 Início Rápido
+### Início Rápido
 
 ```bash
 # 1. Instalar dependências
@@ -23,7 +23,7 @@ pip install -r requirements.txt
 python start.py
 ```
 
-### ✨ Funcionalidades Principais
+### Funcionalidades Principais
 
 - **Conversão Automática**: Converte todos os arquivos `.md` de `articles_md/` para HTML
 - **SEO Otimizado**: Meta tags, Open Graph, Schema.org, Twitter Cards
@@ -34,31 +34,31 @@ python start.py
 - **Gestão de Imagens**: Copia automaticamente imagens para output
 - **Estrutura Semântica**: HTML5 com microdata para SEO
 
-### 📂 Estrutura do Projeto
+### Estrutura do Projeto
 
 ```text
 seo-article-builder/
-├── start.py                      # 🎯 ÚNICO PONTO DE ENTRADA
+├── start.py                      # ÚNICO PONTO DE ENTRADA
 ├── requirements.txt              # Dependências Python
 ├── README.md                     # Documentação
 ├── LICENSE                       # Licença MIT
 │
-├── articles_md/                  # 📝 Artigos em Markdown
+├── articles_md/                  # Artigos em Markdown
 │   ├── artigo1.md
 │   ├── artigo2.md
 │   └── images/                   # Imagens dos artigos
 │       ├── diagrama1.png
 │       └── screenshot.jpg
 │
-├── output/                       # 🌐 HTML gerados
+├── output/                       # HTML gerados
 │   ├── artigo1.html
 │   ├── artigo2.html
 │   └── images/                   # Imagens copiadas
 │
-├── logs/                         # 📊 Logs detalhados
+├── logs/                         # Logs detalhados
 │   └── YYYY_MM_DD_HH_MM_SS_seo_conversion.log
 │
-├── scripts/                      # 🔧 Scripts organizados
+├── scripts/                      # Scripts organizados
 │   ├── format-html-seo.py       # Módulo principal de conversão
 │   ├── html_config.py           # Configurações centralizadas
 │   ├── demo.py                  # Demonstração
@@ -70,14 +70,14 @@ seo-article-builder/
 │   ├── automation/              # Scripts de automação
 │   └── demo/                    # Demonstrações
 │
-├── config/                       # ⚙️ Configurações
+├── config/                       # Configurações
 │   └── seo_config.py            # Configurações SEO
 │
-├── java_code/                    # ☕ Código Java dos exemplos
-└── backup_removed_files/         # 🗃️ Backup automático
+├── java_code/                    # Código Java dos exemplos
+└── backup_removed_files/         # Backup automático
 ```
 
-### 🎯 Como Usar
+### Como Usar
 
 #### 1. Preparar Artigos
 
@@ -108,14 +108,14 @@ python start.py
 
 O sistema fará automaticamente:
 
-- ✅ Busca todos os arquivos `.md` em `articles_md/`
-- ✅ Converte cada um para HTML otimizado
-- ✅ Salva na pasta `output/`
-- ✅ Gera log detalhado em `logs/`
-- ✅ Copia imagens para `output/images/`
-- ✅ Para em caso de erro e registra no log
+- Busca todos os arquivos `.md` em `articles_md/`
+- Converte cada um para HTML otimizado
+- Salva na pasta `output/`
+- Gera log detalhado em `logs/`
+- Copia imagens para `output/images/`
+- Para em caso de erro e registra no log
 
-### 📊 Exemplo de Execução
+### Exemplo de Execução
 
 ```text
 SEO Article Builder - Conversão Automatizada
@@ -152,7 +152,7 @@ TODAS AS CONVERSÕES FORAM CONCLUÍDAS COM SUCESSO!
 PROCESSO COMPLETO FINALIZADO COM SUCESSO!
 ```
 
-### 🔧 Conversão Individual
+### Conversão Individual
 
 Para converter um artigo específico:
 
@@ -160,7 +160,7 @@ Para converter um artigo específico:
 python scripts/format-html-seo.py articles_md/meu_artigo.md output/meu_artigo.html
 ```
 
-### 🎨 Recursos SEO Incluídos
+### Recursos SEO Incluídos
 
 #### Meta Tags Otimizadas
 
@@ -188,7 +188,7 @@ python scripts/format-html-seo.py articles_md/meu_artigo.md output/meu_artigo.ht
 - Navegação por teclado
 - Contraste otimizado
 
-### 🗂️ Logs Detalhados
+### Logs Detalhados
 
 Cada execução gera um log no formato:
 
@@ -204,7 +204,7 @@ O log contém:
 - Erros com stack trace completo
 - Relatório final de sucesso/falha
 
-### ⚙️ Configurações
+### Configurações
 
 Edite `config/seo_config.py` para personalizar:
 
@@ -229,7 +229,7 @@ ARTICLE_CONFIGS = {
 }
 ```
 
-### 📝 Artigos de Exemplo Incluídos
+### Artigos de Exemplo Incluídos
 
 O projeto inclui artigos de exemplo sobre Apache Kafka e programação:
 
@@ -239,7 +239,7 @@ O projeto inclui artigos de exemplo sobre Apache Kafka e programação:
 - **[Parte II: Java com Kafka](articles_md/parte2-java.md)** - Implementação
 - **[Parte Final: Kafka Avançado](articles_md/parte-final-avancado.md)** - Produção
 
-### 🚀 Próximos Passos
+### Próximos Passos
 
 1. **Visualizar**: Abrir arquivos HTML no navegador
 2. **Testar**: Verificar responsividade mobile
@@ -247,23 +247,23 @@ O projeto inclui artigos de exemplo sobre Apache Kafka e programação:
 4. **Publicar**: Fazer upload para servidor web
 5. **Compartilhar**: Postar nas redes sociais
 
-### 🛠️ Requisitos
+### Requisitos
 
 - Python 3.8+
 - Dependências: `markdown`, `beautifulsoup4`, `Pygments`
 - Opcional: JDK 11+ e Maven para exemplos Java
 
-### 📈 Benefícios
+### Benefícios
 
-✅ **Automação Total**: Uma única execução converte todos os artigos
-✅ **SEO Profissional**: Meta tags, Schema.org, Open Graph
-✅ **Design Moderno**: Layout responsivo e atrativo
-✅ **Performance**: Otimizado para Core Web Vitals
-✅ **Logs Detalhados**: Rastreamento completo de execução
-✅ **Estrutura Organizada**: Apenas `start.py` na raiz
-✅ **Backup Automático**: Preserva arquivos importantes
+- **Automação Total**: Uma única execução converte todos os artigos
+- **SEO Profissional**: Meta tags, Schema.org, Open Graph
+- **Design Moderno**: Layout responsivo e atrativo
+- **Performance**: Otimizado para Core Web Vitals
+- **Logs Detalhados**: Rastreamento completo de execução
+- **Estrutura Organizada**: Apenas `start.py` na raiz
+- **Backup Automático**: Preserva arquivos importantes
 
-### 👨‍💻 Autor
+### Autor
 
 Christian V. Mulato
 
@@ -272,7 +272,7 @@ Christian V. Mulato
 - Especialista em Apache Kafka
 - Cara Core Informática
 
-### 📄 Licença
+### Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
