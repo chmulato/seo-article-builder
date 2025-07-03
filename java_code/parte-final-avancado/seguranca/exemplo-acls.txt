@@ -1,0 +1,6 @@
+# Exemplo de ACLs para Kafka
+# Permitir que o usuário 'alice' leia e escreva no tópico 'financeiro'
+User:alice	Topic:financeiro	Read,Write
+
+# Permitir que o usuário 'bob' leia como parte do grupo 'grupo-consumidor'
+User:bob	Group:grupo-consumidor	Read

@@ -1,0 +1,115 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+.tox/
+.venv/
+venv/
+env/
+.env
+
+# HTML output files
+output/*.html
+*.html
+!templates/*.html
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Java / Maven
+/parte1-fundamentos/target/
+/parte2-java/target/
+/parte-final-avancado/target/
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+/logs/
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDEs
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+*.iws
+out/
+.vscode/
+
+# Kafka logs e dados locais
+kafka-logs/
+zookeeper-logs/
+
+# Arquivos temporários
+*.tmp
+*.swp
+*~
+
+# Arquivos de configuração sensíveis
+*.env
+
+#Código Java
+java_code/
+
+# Pasta de backup (arquivos removidos durante limpeza)
+backup_removed_files/
+
+# Arquivos de backup e temporários do projeto
+*.bak
+*.backup
+*_backup.*
+*_old.*
+
+# Logs do projeto
+logs/
+*.log
+
+# Cache de imagens e assets temporários
+cache/
+temp_images/
+
+# Arquivos de teste e desenvolvimento
+test_output/
+dev_*
+debug_*
+
+# Arquivos específicos do Windows
+desktop.ini
+ehthumbs.db
+ehthumbs_vista.db
+
+# Arquivos do sistema macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Arquivos temporários do editor
+*.swp
+*.swo
+*~
+.#*
+#*#
