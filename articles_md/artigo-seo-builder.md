@@ -128,6 +128,6 @@ O código completo do SEO Article Builder está disponível no GitHub:
 
 **Sobre o Autor:**
 
-Christian V. Mulato é desenvolvedor Java sênior e especialista em Apache Kafka na Cara Core Informática, com foco em automação de processos e soluções corporativas de alta performance.
+Christian V. Mulato é desenvolvedor Java sênior na Cara Core Informática, com foco em automação de processos e soluções corporativas de alta performance.
 
 *Conecte-se comigo no LinkedIn para mais insights sobre tecnologia e automação empresarial.*

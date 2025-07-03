@@ -269,7 +269,6 @@ Christian V. Mulato
 
 - Website: [christian-mulato.dev](https://christian-mulato.dev)
 - Desenvolvedor Java Sênior
-- Especialista em Apache Kafka
 - Cara Core Informática
 
 ### Licença
