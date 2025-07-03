@@ -63,6 +63,7 @@ seo-article-builder/
 - ✅ Scripts de conversão funcionando
 - ✅ Scripts de demonstração funcionando
 - ✅ Scripts de automação funcionando
+- ✅ **Sistema de gestão de imagens implementado**
 
 #### 5. Testes Realizados
 
@@ -70,11 +71,14 @@ seo-article-builder/
 - ✅ Demonstração do sistema completo
 - ✅ Automação de conversões
 - ✅ Verificação do `.gitignore`
+- ✅ **Teste de cópia automática de imagens**
+- ✅ **Teste de referências de imagem no HTML**
 
 ### Sistema Pronto Para
 
 - ✅ Adição de novos artigos Markdown
 - ✅ Conversão automática para HTML com SEO
+- ✅ **Gestão automática de imagens**: Copia de `articles_md/images/` para `output/images/`
 - ✅ Versionamento com Git
 - ✅ Deploy em servidor web
 - ✅ Uso profissional

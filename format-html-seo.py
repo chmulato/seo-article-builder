@@ -24,6 +24,7 @@ from pathlib import Path
 import sys
 import re
 import json
+import shutil
 from datetime import datetime
 from bs4 import BeautifulSoup
 import argparse
@@ -559,6 +560,12 @@ class MarkdownToHtmlSEO:
         # Processa o HTML para melhorar SEO
         html_body = self.process_html_content(html_body)
         
+        # Processa caminhos das imagens
+        html_body = self.process_image_paths(html_body)
+        
+        # Copia imagens para pasta de saída
+        self.copy_images(str(md_path), str(html_path))
+        
         # Gera componentes SEO
         structured_data = self.generate_structured_data(meta_info)
         meta_tags = self.generate_meta_tags(meta_info)
@@ -570,7 +577,49 @@ class MarkdownToHtmlSEO:
         with html_path.open('w', encoding='utf-8') as f:
             f.write(html_template)
         
+        # Copia imagens se existirem
+        self.copy_images(md_file, html_file)
+        
         return str(html_path.resolve())
+
+    def copy_images(self, md_file: str, html_file: str) -> None:
+        """Copia imagens de articles_md/images/ para output/images/."""
+        md_path = Path(md_file)
+        html_path = Path(html_file)
+        
+        # Pastas de origem e destino das imagens
+        source_images_dir = md_path.parent / "images"
+        dest_images_dir = html_path.parent / "images"
+        
+        # Verifica se existe pasta de imagens na origem
+        if source_images_dir.exists() and source_images_dir.is_dir():
+            # Cria pasta de destino se não existir
+            dest_images_dir.mkdir(parents=True, exist_ok=True)
+            
+            # Copia todas as imagens (somente se não existir ou for mais recente)
+            for image_file in source_images_dir.glob("*"):
+                if image_file.is_file():
+                    dest_file = dest_images_dir / image_file.name
+                    
+                    # Verifica se precisa copiar
+                    if not dest_file.exists() or image_file.stat().st_mtime > dest_file.stat().st_mtime:
+                        shutil.copy2(image_file, dest_file)
+                        print(f'[IMAGE] Copiada: {image_file.name} → {dest_file}')
+                    else:
+                        print(f'[IMAGE] Skipped: {image_file.name} (já existe)')
+    
+    def process_image_paths(self, html_content: str) -> str:
+        """Processa caminhos das imagens no HTML para apontar para output/images/."""
+        # Substitui referencias de images/ por images/ (já está correto)
+        # Substitui referencias de articles_md/images/ por images/
+        html_content = re.sub(r'src="articles_md/images/', 'src="images/', html_content)
+        html_content = re.sub(r'src="\.\.\/articles_md\/images\/', 'src="images/', html_content)
+        
+        # Substitui referencias de /assets/images/ por images/
+        html_content = re.sub(r'src="/assets/images/', 'src="images/', html_content)
+        html_content = re.sub(r'src="assets/images/', 'src="images/', html_content)
+        
+        return html_content
 
 
 def convert_md_to_html(md_file: str, html_file: Optional[str] = None, 

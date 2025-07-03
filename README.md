@@ -17,6 +17,7 @@
 - Syntax highlighting para código
 - Lazy loading e performance otimizada
 - Configurações centralizadas e customizáveis
+- **Gestão automática de imagens**: Copia automaticamente imagens de `articles_md/images/` para `output/images/`
 
 ### Artigos de Exemplo
 
@@ -27,7 +28,7 @@
 
 ### Estrutura do Projeto
 
-```
+```text
 seo-article-builder/
 ├── Sistema Central
 │   ├── format-html-seo.py        # Módulo principal de conversão
@@ -69,12 +70,18 @@ seo-article-builder/
 
 Coloque seus artigos em formato Markdown na pasta `articles_md/`:
 
-```
+```text
 articles_md/
 ├── meu_artigo.md
 ├── tutorial_python.md
-└── guia_react.md
+├── guia_react.md
+└── images/                       # Imagens dos artigos
+    ├── diagrama1.png
+    ├── screenshot.jpg
+    └── logo.svg
 ```
+
+**Importante**: As imagens devem estar em `articles_md/images/` e serão automaticamente copiadas para `output/images/` durante a conversão.
 
 #### 2. Instalar Dependências
 
@@ -100,19 +107,19 @@ ARTICLE_CONFIGS = {
 
 #### 4. Converter Artigos
 
-**Método 1: Menu Interativo (Recomendado)**
+##### Método 1: Menu Interativo (Recomendado)
 
 ```bash
 python run_conversion.py
 ```
 
-**Método 2: Demonstração Rápida**
+##### Método 2: Demonstração Rápida
 
 ```bash
 python demo.py
 ```
 
-**Método 3: Scripts Diretos**
+##### Método 3: Scripts Diretos
 
 ```bash
 # Converter artigo específico
