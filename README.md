@@ -1,5 +1,7 @@
 # SEO Article Builder
 
+![Formatando para o Google e Redes Sociais](/articles_md/images/article_seo.png)
+
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![Markdown](https://img.shields.io/badge/Markdown-HTML-green.svg)](https://markdown.org)
 [![SEO](https://img.shields.io/badge/SEO-Optimized-orange.svg)](https://developers.google.com/search/docs)
