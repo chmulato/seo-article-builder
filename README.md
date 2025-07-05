@@ -268,8 +268,7 @@ O projeto inclui artigos de exemplo sobre Apache Kafka e programação:
 
 Christian V. Mulato
 
-- Website: [christian-mulato.dev](https://christian-mulato.dev)
-- Desenvolvedor Java Sênior
+- Website: [caracore.com.br](https://www.caracore.com.br)
 - Cara Core Informática
 
 ### Licença
